@@ -1,0 +1,258 @@
+.App {
+  height: 100vh;
+  padding-top: 120px;
+}
+
+.Container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/*Начало настроек для поиска городов*/
+.Wrapper-city-search {
+  height: 60px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-bottom: 110px;
+}
+
+.Input-for-city-search {
+  width: 80%;
+  border: none;
+  padding: 20px;
+  outline: none;
+  height: 100%;
+  background-color: #0caaff;
+  background-image: linear-gradient(90deg, #5f95f9 0%, #0caaff 100%);
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Add-city-btn {
+  background-color: rgb(237, 237, 237);
+  width: 20%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  font-size: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.Add-city-btn:hover {
+  background-color: rgb(248, 210, 116);
+  cursor: pointer;
+  color: white;
+}
+/*Конец настроек для поиска городов*/
+
+/*Начало настроек для карточек с городами*/
+
+.Wrapper-weather-cards {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Создаем 3 колонки с равным размером */
+  grid-gap: 50px; /* Устанавливаем отступы между карточками */
+  justify-items: center;
+  padding-bottom: 20px;
+}
+
+.City-card {
+  height: 450px;
+  width: 300px;
+  background-color: #0caaff;
+  background-image: linear-gradient(0deg, #0caaff 0%, #5f95f9 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.Visible {
+  animation: fadeInAnimation 0.8s ease;
+}
+
+.Hidden {
+  animation: fadeOutAnimation 0.6s ease;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.Btn-wrapper {
+  display: flex;
+  width: 260px;
+  justify-content: flex-end;
+}
+
+.Edit-btn {
+  background-color: rgb(243, 199, 89); /* Зеленый цвет фона */
+  color: white; /* Белый цвет текста */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  border: none; /* Убираем границу */
+  border-radius: 5px; /* Закругляем углы */
+  cursor: pointer; /* Изменяем курсор при наведении */
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 10px;
+  width: 60px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Edit-btn:hover {
+  background-color: rgb(243, 206, 112); /* Изменяем цвет фона при наведении */
+}
+
+.Del-btn {
+  background-color: #f44336; /* Красный цвет фона */
+  color: white; /* Белый цвет текста */
+  padding: 5px; /* Отступы внутри кнопки */
+  border: none; /* Убираем границу */
+  border-radius: 50%; /* Делаем кнопку круглой */
+  cursor: pointer; /* Изменяем курсор при наведении */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Del-btn:hover {
+  background-color: #fc7070; /* Изменяем цвет фона при наведении */
+}
+
+.Card-info-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* .Weather-img {
+  width: 50px;
+  height: 50px;
+} */
+
+.City-name {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Weather-info {
+  color: white;
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Temperature-info {
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.Humidity-info,
+.Feels-like-info {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/*Конец настроек для карточек с городами*/
+
+input::-webkit-input-placeholder {
+  color: white;
+}
+
+input::-webkit-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+input::-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+input:-moz-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+input:-ms-input-placeholder {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+input:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+input:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+input:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.Error-message {
+  color: red;
+  padding: 10px;
+  border-radius: 5px;
+  animation: fadeinout 2s ease-in-out;
+  font-size: 20px;
+}
+
+@keyframes fadeinout {
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+
+/* Настройки для спиннера загрзуки */
+.Loading-spinner {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.Loading-spinner-img {
+  width: 50px;
+  height: 50px;
+}
